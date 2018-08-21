@@ -1,4 +1,4 @@
-#Patrick Medeiros De Luca 
+# Patrick Medeiros De Luca 
 
-#iniciando um repositório Git
+# iniciando um repositório Git
 git init
