@@ -13,23 +13,57 @@ public class Prova {
 
     private String data;
     private String local;
-    private String nome;
+    private String nomeDisciplina;
     private int peso = 10;
+    Objetiva[] a;
+    Discursiva[] b;
+    private int nQuestoes;
 
     public Prova(String nomeDaProva) {
-        this.nome = nomeDaProva;
+        this.nomeDisciplina = nomeDaProva;
     }
 
     public String obtemDetalhes() {
         String retorno = "";
-        retorno = retorno + "Nome: " + this.getNome() + "\n";
+        retorno = retorno + "Nome: " + this.getNomeDisciplina() + "\n";
         retorno = retorno + "local: " + this.getLocal() + "\n";
         retorno = retorno + "Data: " + this.getData() + "\n";
         retorno = retorno + "Peso: " + this.getPeso() + "\n";
         return retorno;
 
     }
-
+    
+    public String imprimeProva(){
+        String retorno ="";
+        retorno = retorno + "Nome: " + this.getNomeDisciplina() + "\n";
+        retorno = retorno + "local: " + this.getLocal() + "\n";
+        retorno = retorno + "Data: " + this.getData() + "\n";
+        retorno = retorno + "Peso: " + this.getPeso() + "\n";
+        
+        for(int i=0; i<nQuestoes; i++){ //Objetiva
+            retorno = retorno + this.a[i].getPergunta()+ "\n";
+            retorno = retorno + this.a[i].getPeso()+ "\n";
+            for(int j=0; j<5; j++)
+                retorno = retorno + this.a[i].getOpcoes()[j]+ "\n";
+            retorno = retorno + this.a[i].getRespostaCorreta()+ "\n";
+            
+        }
+        for(int i=0; i<nQuestoes; i++){ //Discursiva
+            retorno = retorno + this.b[i].getPergunta() + "\n";
+            retorno = retorno + this.b[i].getPeso() + "\n";
+            retorno = retorno + this.b[i].getCriteriosCorrecao()+ "\n" ;
+            
+        }
+        return retorno;
+    }
+    
+    public void setNomeDisciplina(String nome){
+        this.nomeDisciplina=nome;
+    }
+    
+    public String getNomeDisciplina(){
+        return nomeDisciplina;
+    }
     /**
      * @return the data
      */
@@ -59,20 +93,6 @@ public class Prova {
     }
 
     /**
-     * @return the nome
-     */
-    public String getNome() {
-        return nome;
-    }
-
-    /**
-     * @param nome the nome to set
-     */
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    /**
      * @return the peso
      */
     public int getPeso() {
@@ -84,5 +104,19 @@ public class Prova {
      */
     public void setPeso(int peso) {
         this.peso = peso;
+    }
+
+    /**
+     * @return the nQuestoes
+     */
+    public int getnQuestoes() {
+        return nQuestoes;
+    }
+
+    /**
+     * @param nQuestoes the nQuestoes to set
+     */
+    public void setnQuestoes(int nQuestoes) {
+        this.nQuestoes = nQuestoes;
     }
 }
