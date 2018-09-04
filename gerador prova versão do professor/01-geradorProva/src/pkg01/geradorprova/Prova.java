@@ -7,76 +7,69 @@ package pkg01.geradorprova;
 
 /**
  *
- * @author 5678056
+ * @author marcelo
  */
 public class Prova {
 
-
-    private String data;
+    private String nome;
     private String local;
-    private String nomeDisciplina;
-    private int peso = 10;
+    private String data;
+    private int peso;
     private Discursiva[] questoesDiscursivas;
     private Objetiva[] questoesObjetivas;
-    private int nQuestoes;
 
-    public Prova(String nomeDaProva) {
-        this.nomeDisciplina = nomeDaProva;
+    public Prova(String nome) {
+        this.nome = nome;
+        this.peso = 10;
     }
 
     public String obtemDetalhes() {
         String retorno = "";
-        retorno = retorno + "Nome: " + this.getNomeDisciplina() + "\n";
-        retorno = retorno + "local: " + this.getLocal() + "\n";
-        retorno = retorno + "Data: " + this.getData() + "\n";
-        retorno = retorno + "Peso: " + this.getPeso() + "\n";
+        retorno += "Nome: " + this.getNome() + "\n";
+        retorno += "Local: " + this.getLocal() + "\n";
+        retorno += "Data: " + this.getData() + "\n";
+        retorno += "Peso: " + this.getPeso() + "\n";
         return retorno;
-
     }
+    
     public String obtemProvaImpressao(){
         String retorno = this.obtemDetalhes();
         
-        for(int i = 0; i < this.getQuestoesDiscursivas().length; i++){
+        for(int i = 0; i < this.questoesDiscursivas.length; i++){
             retorno += "=================== \n";
-            retorno += "(peso: "+this.getQuestoesDiscursivas()[i].getPeso()+") ";
-            retorno += this.getQuestoesDiscursivas()[i].getPergunta()+"\n";
+            retorno += "(peso: "+this.questoesDiscursivas[i].getPeso()+") ";
+            retorno += this.questoesDiscursivas[i].getPergunta()+"\n";
             retorno += "____________________________________________________\n";
             retorno += "____________________________________________________\n";
             retorno += "____________________________________________________\n";
-            retorno += "Critérios correção: "+this.getQuestoesDiscursivas()[i].getCriteriosCorrecao()+"\n";
+            retorno += "Critérios correção: "+this.questoesDiscursivas[i].getCriteriosCorrecao()+"\n";
         }
         
-        for(int i = 0; i < this.getQuestoesObjetivas().length; i++){
+        for(int i = 0; i < this.questoesObjetivas.length; i++){
             retorno += "=================== \n";
-            retorno += "(peso: "+this.getQuestoesObjetivas()[i].getPeso()+") ";
-            retorno += this.getQuestoesObjetivas()[i].getPergunta()+"\n";
-            for(int j = 0; j < this.getQuestoesObjetivas()[i].getOpcoes().length; j++){
-                retorno += (j+1)+") "+this.getQuestoesObjetivas()[i].getOpcoes()[j]+"\n";
+            retorno += "(peso: "+this.questoesObjetivas[i].getPeso()+") ";
+            retorno += this.questoesObjetivas[i].getPergunta()+"\n";
+            for(int j = 0; j < this.questoesObjetivas[i].getOpcoes().length; j++){
+                retorno += (j+1)+") "+this.questoesObjetivas[i].getOpcoes()[j]+"\n";
             }
         }
         return retorno;
         
     }
     
-    public void setNomeDisciplina(String nome){
-        this.nomeDisciplina=nome;
-    }
-    
-    public String getNomeDisciplina(){
-        return nomeDisciplina;
-    }
+
     /**
-     * @return the data
+     * @return the nome
      */
-    public String getData() {
-        return data;
+    public String getNome() {
+        return nome;
     }
 
     /**
-     * @param data the data to set
+     * @param nome the nome to set
      */
-    public void setData(String data) {
-        this.data = data;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     /**
@@ -94,6 +87,20 @@ public class Prova {
     }
 
     /**
+     * @return the data
+     */
+    public String getData() {
+        return data;
+    }
+
+    /**
+     * @param data the data to set
+     */
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    /**
      * @return the peso
      */
     public int getPeso() {
@@ -108,20 +115,6 @@ public class Prova {
     }
 
     /**
-     * @return the nQuestoes
-     */
-    public int getnQuestoes() {
-        return nQuestoes;
-    }
-
-    /**
-     * @param nQuestoes the nQuestoes to set
-     */
-    public void setnQuestoes(int nQuestoes) {
-        this.nQuestoes = nQuestoes;
-    }
-    
-        /**
      * @return the questoesDiscursivas
      */
     public Discursiva[] getQuestoesDiscursivas() {
