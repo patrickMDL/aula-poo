@@ -10,13 +10,25 @@ package pkg01.geradorprova;
  * @author 5678056
  */
 final class Objetiva extends Questao{
-
     
     private String[] opcoes;
     private int respostaCorreta;
     
     public Objetiva(){
         this.opcoes = new String[5];
+    }
+    
+    @Override
+    public String retornaQuestao(){
+        String retorno="";
+        retorno += "(" + this.getPeso() + ") - " + this.getPergunta() + "\r\n";
+        String[] aux = this.getOpcoes();
+        char letra = 'a';
+        for (int i=0; i<5; i++){
+            retorno += letra + ") " + aux[i] + "\r\n";
+            letra++;
+        }
+        return retorno;
     }
     
     /**

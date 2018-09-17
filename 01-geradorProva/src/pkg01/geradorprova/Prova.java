@@ -5,57 +5,45 @@
  */
 package pkg01.geradorprova;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author 5678056
  */
 public class Prova {
 
+    
 
     private String data;
     private String local;
     private String nomeDisciplina;
     private int peso = 10;
-    private Discursiva[] questoesDiscursivas;
-    private Objetiva[] questoesObjetivas;
-    private int nQuestoes;
+    private ArrayList<Questao> questoes = new ArrayList<Questao>();
 
     public Prova(String nomeDaProva) {
         this.nomeDisciplina = nomeDaProva;
+        this.peso = 10;
     }
 
     public String obtemDetalhes() {
         String retorno = "";
-        retorno = retorno + "Nome: " + this.getNomeDisciplina() + "\n";
-        retorno = retorno + "local: " + this.getLocal() + "\n";
-        retorno = retorno + "Data: " + this.getData() + "\n";
-        retorno = retorno + "Peso: " + this.getPeso() + "\n";
+        retorno += ("Disciplina: " +this.nomeDisciplina + "\r\n");
+        retorno += ("Peso: " + this.peso + "\r\n");
+        retorno += ("Data: " + this.data + "\r\n");
+        retorno += ("Aluno: __________________________________________\r\n");
+        retorno += ("======================================================\r\n");
         return retorno;
 
     }
     public String obtemProvaImpressao(){
-        String retorno = this.obtemDetalhes();
-        
-        for(int i = 0; i < this.getQuestoesDiscursivas().length; i++){
-            retorno += "=================== \n";
-            retorno += "(peso: "+this.getQuestoesDiscursivas()[i].getPeso()+") ";
-            retorno += this.getQuestoesDiscursivas()[i].getPergunta()+"\n";
-            retorno += "____________________________________________________\n";
-            retorno += "____________________________________________________\n";
-            retorno += "____________________________________________________\n";
-            retorno += "Critérios correção: "+this.getQuestoesDiscursivas()[i].getCriteriosCorrecao()+"\n";
-        }
-        
-        for(int i = 0; i < this.getQuestoesObjetivas().length; i++){
-            retorno += "=================== \n";
-            retorno += "(peso: "+this.getQuestoesObjetivas()[i].getPeso()+") ";
-            retorno += this.getQuestoesObjetivas()[i].getPergunta()+"\n";
-            for(int j = 0; j < this.getQuestoesObjetivas()[i].getOpcoes().length; j++){
-                retorno += (j+1)+") "+this.getQuestoesObjetivas()[i].getOpcoes()[j]+"\n";
-            }
+        String retorno = obtemDetalhes();
+        int cont=1;
+        for(int i=0; i<this.questoes.size(); i++){
+            retorno+=(cont+this.questoes.get(i).retornaQuestao()+"\r\n");
+            cont++;
         }
         return retorno;
-        
     }
     
     public void setNomeDisciplina(String nome){
@@ -99,6 +87,12 @@ public class Prova {
     public int getPeso() {
         return peso;
     }
+/**
+     * @return the questoes
+     */
+    public ArrayList getQuestoes() {
+        return questoes;
+    }
 
     /**
      * @param peso the peso to set
@@ -106,47 +100,14 @@ public class Prova {
     public void setPeso(int peso) {
         this.peso = peso;
     }
-
-    /**
-     * @return the nQuestoes
-     */
-    public int getnQuestoes() {
-        return nQuestoes;
-    }
-
-    /**
-     * @param nQuestoes the nQuestoes to set
-     */
-    public void setnQuestoes(int nQuestoes) {
-        this.nQuestoes = nQuestoes;
-    }
     
-        /**
-     * @return the questoesDiscursivas
-     */
-    public Discursiva[] getQuestoesDiscursivas() {
-        return questoesDiscursivas;
-    }
-
     /**
-     * @param questoesDiscursivas the questoesDiscursivas to set
+     * @param questoes the questoes to set
      */
-    public void setQuestoesDiscursivas(Discursiva[] questoesDiscursivas) {
-        this.questoesDiscursivas = questoesDiscursivas;
+    public void setQuestoes(ArrayList<Questao> questoes) {
+        this.questoes = questoes;
     }
 
-    /**
-     * @return the questoesObjetivas
-     */
-    public Objetiva[] getQuestoesObjetivas() {
-        return questoesObjetivas;
-    }
 
-    /**
-     * @param questoesObjetivas the questoesObjetivas to set
-     */
-    public void setQuestoesObjetivas(Objetiva[] questoesObjetivas) {
-        this.questoesObjetivas = questoesObjetivas;
-    }
-
+    
 }
