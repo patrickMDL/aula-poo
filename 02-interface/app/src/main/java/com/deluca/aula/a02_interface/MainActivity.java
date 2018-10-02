@@ -1,4 +1,4 @@
-package com.deluca.aula.myapplication;
+package com.deluca.aula.a02_interface;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

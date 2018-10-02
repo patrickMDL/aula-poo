@@ -1,4 +1,4 @@
-package com.deluca.aula.myapplication;
+package com.deluca.aula.a02_interface;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.deluca.aula.myapplication", appContext.getPackageName());
+        assertEquals("com.deluca.aula.a02_interface", appContext.getPackageName());
     }
 }

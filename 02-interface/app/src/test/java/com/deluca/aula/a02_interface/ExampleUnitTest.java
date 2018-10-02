@@ -1,4 +1,4 @@
-package com.deluca.aula.myapplication;
+package com.deluca.aula.a02_interface;
 
 import org.junit.Test;
 
