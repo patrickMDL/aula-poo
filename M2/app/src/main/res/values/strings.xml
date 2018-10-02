@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Contato</string>
-    <string name="cancelar"> Cancelar</string>
-    <string name="save"> Salvar</string>
-    <string name="nome"> Nome</string>
-    <string name="telephone_number">Número de Telefone</string>
-    <string name="company">Empresa</string>
-    <string name="contact_photo_description">Foto Padrão</string>
-</resources>
