@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="decimal">Preço</string>
+    <string name="discount">Desconto</string>
+    <string name="coin">R$</string>
+    <string name="percent">%</string>
+    <string name="result">Resultado: </string>
+    <string name="calculate">Calcular</string>
+</resources>

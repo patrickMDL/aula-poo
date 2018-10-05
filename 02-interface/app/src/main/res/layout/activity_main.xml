@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:contentDescription="@string/content_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/defulf_contact_normal" />
+
+    <ImageView
+        android:id="@+id/ivNewPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/content_description"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPhoto"
+        app:layout_constraintEnd_toEndOf="@+id/ivPhoto"
+        app:srcCompat="@drawable/baseline_camera_alt_black_48" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/ivContactname"
+        app:layout_constraintTop_toBottomOf="@+id/tvGenericMail" />
+
+    <ImageView
+        android:id="@+id/ivContactname"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="78dp"
+        android:contentDescription="@string/content_description"
+        android:tint="@color/Defult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPhoto"
+        app:srcCompat="@drawable/baseline_person_black_48" />
+
+    <ImageView
+        android:id="@+id/ivPhone"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="83dp"
+        android:contentDescription="@string/content_description"
+        android:tint="@color/Defult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivContactname"
+        app:srcCompat="@drawable/baseline_local_phone_black_48" />
+
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/phone_number"
+        android:inputType="phone"
+        app:layout_constraintStart_toEndOf="@+id/ivPhone"
+        app:layout_constraintTop_toBottomOf="@+id/etLastName" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/ivPhone"
+        app:layout_constraintTop_toBottomOf="@+id/etPhoneNumber" />
+
+    <EditText
+        android:id="@+id/etLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/ivContactname"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+    <ImageView
+        android:id="@+id/evEmail"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/content_description"
+        android:tint="@color/Defult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPhone"
+
+        app:srcCompat="@drawable/ic_gmail_black_48dp" />
+
+    <EditText
+        android:id="@+id/etAdress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/adress"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/evEmail"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <ImageView
+        android:id="@+id/ivGmail"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPhoto"
+        app:srcCompat="@mipmap/google" />
+
+    <TextView
+        android:id="@+id/tvSave"
+        android:layout_width="65dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="14dp"
+        android:text="Salva em:"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivGmail"
+        app:layout_constraintTop_toBottomOf="@+id/ivPhoto" />
+
+    <TextView
+        android:id="@+id/tvGenericMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/generic_email"
+        app:layout_constraintStart_toEndOf="@+id/ivGmail"
+        app:layout_constraintTop_toBottomOf="@+id/tvSave" />
+
+    <ImageView
+        android:id="@+id/ivArrowDown1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="58dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvGenericMail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvGenericMail"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/baseline_keyboard_arrow_down_black_18dp" />
+
+    <ImageView
+        android:id="@+id/ivArrowDown2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="58dp"
+        app:layout_constraintBottom_toBottomOf="@+id/etName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etName"
+        app:srcCompat="@mipmap/baseline_keyboard_arrow_down_black_18dp" />
+
+</android.support.constraint.ConstraintLayout>
