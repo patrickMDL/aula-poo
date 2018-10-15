@@ -15,10 +15,17 @@ public class CircleActivity extends AppCompatActivity {
     }
 
     public void calculateCircle(View button){
-        EditText typedRadius = findViewById(R.id.etRadius);
-        double radius = Double.parseDouble(typedRadius.getText().toString());
+        EditText radius = findViewById(R.id.etRadius);
+
+        String typedRadius = radius.getText().toString();
+        if (typedRadius.equals("")){
+            radius.setError("Digite um valor.");
+            return;
+        }
+
+        double radiusInDouble = Double.parseDouble(radius.getText().toString());
         Intent resultCircle = new Intent(this.getApplicationContext(), ResultCircleActivity.class);
-        resultCircle.putExtra("radius", radius);
+        resultCircle.putExtra("radius", radiusInDouble);
         this.startActivity(resultCircle);
     }
 }

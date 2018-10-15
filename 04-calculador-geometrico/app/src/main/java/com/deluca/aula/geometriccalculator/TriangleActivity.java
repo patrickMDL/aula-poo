@@ -14,17 +14,31 @@ public class TriangleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_triangle);
     }
     public void calculateTriangle (View button){
-        EditText typedHeight = findViewById(R.id.etHeight);
-        EditText typedWidth = findViewById(R.id.etWidth);
+        EditText height = findViewById(R.id.etHeight);
+        EditText width = findViewById(R.id.etWidth);
 
-        double Height = Double.parseDouble(typedHeight.getText().toString());
-        double Width = Double.parseDouble(typedWidth.getText().toString());
+        String typedHeight = height.getText().toString();
+        String typedWidth = width.getText().toString();
+
+        if (typedHeight.equals("") || typedWidth.equals("")) {
+            if (typedHeight.equals("")) {
+                height.setError("Digite um valor.");
+                return;
+            }
+            if (typedWidth.equals("")) {
+                width.setError("Digite um valor.");
+                return;
+            }
+        }else {
+
+            double heightInDouble = Double.parseDouble(height.getText().toString());
+            double widthInDouble = Double.parseDouble(width.getText().toString());
 
 
-
-        Intent openResultTriangle = new Intent(this.getApplicationContext(), ResultTriangleActivity.class);
-        openResultTriangle.putExtra("width", Width);
-        openResultTriangle.putExtra("Height", Height);
-        this.startActivity(openResultTriangle);
+            Intent openResultTriangle = new Intent(this.getApplicationContext(), ResultTriangleActivity.class);
+            openResultTriangle.putExtra("widthInDouble", widthInDouble);
+            openResultTriangle.putExtra("heightInDouble", heightInDouble);
+            this.startActivity(openResultTriangle);
+        }
     }
 }

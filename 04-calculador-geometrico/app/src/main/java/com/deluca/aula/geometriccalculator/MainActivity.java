@@ -24,4 +24,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void onClickRectangle(View button){
+        Intent openRectangleActivity = new Intent(this.getApplicationContext(), rectangleActivity.class);
+        this.startActivity(openRectangleActivity);
+    }
 }

@@ -15,13 +15,13 @@ public class ResultTriangleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_triangle);
-        double typedWidth = this.getIntent().getDoubleExtra("width", -1);
-        double typedHight = this.getIntent().getDoubleExtra("Hight", -1);
-        double result = (typedHight*typedWidth)/2;
+        double widthInDouble = this.getIntent().getDoubleExtra("widthInDouble", -1);
+        double heightInDouble = this.getIntent().getDoubleExtra("heightInDouble", -1);
+        double result = (widthInDouble * heightInDouble)/2.0;
         TextView tvResult = findViewById(R.id.tvResultTriangle);
         NumberFormat nf = DecimalFormat.getInstance();
         nf.setMaximumFractionDigits(2);
-        tvResult.setText(nf.format(result));
+        tvResult.setText("Área: "  +nf.format(result));
     }
 
     public void onClickMenu(View button){

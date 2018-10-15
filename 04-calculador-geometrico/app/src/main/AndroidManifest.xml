@@ -19,7 +19,9 @@
         <activity android:name=".CircleActivity" />
         <activity android:name=".ResultCircleActivity" />
         <activity android:name=".TriangleActivity" />
-        <activity android:name=".ResultTriangleActivity"></activity>
+        <activity android:name=".ResultTriangleActivity" />
+        <activity android:name=".rectangleActivity" />
+        <activity android:name=".rectangleResultActivity"></activity>
     </application>
 
 </manifest>
