@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CircleActivity">
+
+    <TextView
+        android:id="@+id/tvRadius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/radius"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/etRadius"
+        app:layout_constraintStart_toStartOf="@+id/etRadius" />
+
+    <EditText
+        android:id="@+id/etRadius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="196dp"
+        android:ems="10"
+        android:inputType="textPersonName|number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btRadius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/circle"
+        android:onClick="calculateCircle"
+        app:layout_constraintEnd_toEndOf="@+id/etRadius"
+        app:layout_constraintStart_toStartOf="@+id/etRadius"
+        app:layout_constraintTop_toBottomOf="@+id/etRadius" />
+</android.support.constraint.ConstraintLayout>
