@@ -27,6 +27,7 @@ public class rectangleResultActivity extends AppCompatActivity {
 
     public void onClickMenu(View button){
         Intent openMenu = new Intent(getApplicationContext(), MainActivity.class);
+        openMenu.addFlags(openMenu.FLAG_ACTIVITY_CLEAR_TOP);
         this.startActivity(openMenu);
     }
 }

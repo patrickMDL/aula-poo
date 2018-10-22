@@ -1,6 +1,7 @@
 package com.deluca.aula.geometriccalculator;
 
 import android.content.Intent;
+import android.support.v4.content.IntentCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -21,9 +22,11 @@ public class ResultCircleActivity extends AppCompatActivity {
         NumberFormat nf = DecimalFormat.getInstance();
         nf.setMaximumFractionDigits(2);
         tvResult.setText("Área: "  +nf.format(result));
+
     }
     public void onClickMenu(View button){
         Intent openMenu = new Intent(this.getApplicationContext(), MainActivity.class);
+        openMenu.addFlags(openMenu.FLAG_ACTIVITY_CLEAR_TOP);
         this.startActivity(openMenu);
     }
 }

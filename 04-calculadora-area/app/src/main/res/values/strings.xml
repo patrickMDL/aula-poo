@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Calculadora de Área</string>
+    <string name="circle">Círculo</string>
+    <string name="triangle">Triângulo</string>
+    <string name="square">Quadrado</string>
+    <string name="next">Avançar</string>
+    <string name="choose">Selecione uma forma:</string>
+    <string name="circleData">Informe os dados do círculo:</string>
+    <string name="triangleData">Informe os dados do triângulo:</string>
+    <string name="squareData">Informe os dados do Quadrado:</string>
+    <string name="tryAgain">Começar Novamente</string>
+    <string name="width">Base:</string>
+    <string name="height">Altura:</string>
+    <string name="radius">Raio: </string>
+</resources>

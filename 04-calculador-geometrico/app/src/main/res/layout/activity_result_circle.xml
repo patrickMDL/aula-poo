@@ -43,6 +43,7 @@
         android:layout_marginBottom="8dp"
         android:onClick="onClickMenu"
         android:text="@string/finish"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>

@@ -26,6 +26,7 @@ public class ResultTriangleActivity extends AppCompatActivity {
 
     public void onClickMenu(View button){
         Intent openMenu = new Intent(this.getApplicationContext(), MainActivity.class);
+        openMenu.addFlags(openMenu.FLAG_ACTIVITY_CLEAR_TOP);
         this.startActivity(openMenu);
     }
 
