@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClickNext(View Button) {
         this.radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-
         if (radioGroup.equals("Quadrado")) {
             Intent openRectangleActivity = new Intent(this.getApplicationContext(), rectangleActivity.class);
             this.startActivity(openRectangleActivity);
