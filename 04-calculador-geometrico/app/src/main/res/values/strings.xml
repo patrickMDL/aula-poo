@@ -2,11 +2,12 @@
     <string name="app_name">Geometric Calculator</string>
     <string name="circle"> Círculo </string>
     <string name="triangle">Triângulo</string>
-    <string name="rectangle">Retângulo</string>
-    <string name="choice">Deseja calcular a área de qual figura?</string>
+    <string name="square">Quadrado</string>
+    <string name="choice">Selecione a forma:</string>
     <string name="radius">Raio: </string>
     <string name="calculate">Calcular</string>
     <string name="Height">Altura</string>
     <string name="width">Largura</string>
     <string name="finish">Concluir</string>
+    <string name="next">Avançar</string>
 </resources>
