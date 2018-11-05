@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Controle de Abastecimento</string>
+    <string name="sentence1">Autonomia Atual</string>
+    <string name="km1">KM/L</string>
+    <string-array name="gasStationsOptions">
+        <item>Outros</item>
+        <item>Texaco</item>
+        <item>Shell</item>
+        <item>Petrobras</item>
+        <item>Ipiranga</item>
+
+    </string-array>
+    <string name="next">Avançar</string>
+    <string name="km2">Quilometragem atual</string>
+    <string name="L">Litros Abastecidos</string>
+    <string name="day">Data</string>
+    <string name="gasStation">Postos</string>
+
+    <string name="km_maior">KM deve ser maior que o anterior</string>
+    <string name="campo_preenchido">Campo deve ser preenchido</string>
+    <string name="km_atual">Km atual</string>
+
+    <!-- Para a "capa" que insere na lista -->
+    <string name="km">KM: </string>
+    <string name="kmLista">000000</string>
+    <string name="dataLista">__/__/__</string>
+    <string name="Listros"> --L</string>
+    <string name="imageDescription">Imagem padrao para ser trocada pelo posto selecionado</string>
+</resources>

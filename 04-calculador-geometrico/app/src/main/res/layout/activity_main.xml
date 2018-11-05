@@ -14,14 +14,16 @@
         android:text="@string/choice"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
-        app:layout_constraintStart_toStartOf="@+id/radioGroup" />
+        app:layout_constraintBottom_toTopOf="@+id/rgChoices"
+        app:layout_constraintStart_toStartOf="@+id/rgChoices" />
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/rgChoices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,21 +31,21 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radioButton6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/square" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/radioButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/triangle" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/radioButton5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -51,13 +53,12 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick="onClickNext"
-        android:text="@string/next"
+        android:onClick="onClickMenu"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>
