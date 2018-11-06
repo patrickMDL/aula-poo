@@ -22,16 +22,6 @@ public class PostoViewHolder extends RecyclerView.ViewHolder{
 
     public PostoViewHolder(View itemView) {
         super(itemView);
-
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent abrirAtividade = new Intent( view.getContext(), NovoAbastecimentoActivity.class );
-                abrirAtividade.putExtra("posto", (Serializable) PostoViewHolder.this.objetoSendoExibido);
-                ((HistoricoActivity) view.getContext()).startActivityForResult(abrirAtividade, HistoricoActivity.RC_ADICIONAR_ABASTECIMENTO);
-            }
-        });
-
         itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(final View view) {
@@ -53,8 +43,6 @@ public class PostoViewHolder extends RecyclerView.ViewHolder{
                         })
                         .show();
 
-
-                Toast.makeText(view.getContext(), "CLICOU LONGAMENTE", Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
@@ -62,7 +50,7 @@ public class PostoViewHolder extends RecyclerView.ViewHolder{
         this.tvData = itemView.findViewById(R.id.tvDataGaveta);
         this.tvLitros=itemView.findViewById(R.id.tvLitrosGaveta);
         this.tvKilometros= itemView.findViewById(R.id.tvKmGaveta);
-        this.ivPosto=itemView.findViewById(R.id.spPostos);
+        this.ivPosto=itemView.findViewById(R.id.imageView);
     }
 
     public void atualizaGaveta(Posto objetoPosto){
@@ -70,21 +58,21 @@ public class PostoViewHolder extends RecyclerView.ViewHolder{
 
         String Kilmetros = "KM: " + String.valueOf(objetoPosto.getKilometros());
         String Litros = String.valueOf(objetoPosto.getLitros()+"L");
-        String posto = objetoPosto.getPosto();
+
 
         this.tvData.setText(objetoPosto.getData());
         this.tvLitros.setText(Litros);
         this.tvKilometros.setText(Kilmetros);
 
-       /* if(posto.equals("Ipiranga")){
-            ivPosto.setImageDrawable(ContextCompat.getDrawable(App.getContext(), R.drawable.ipiranga));
-        }else if(posto.equals("Petrobras")){
-            ivPosto.setImageDrawable(ContextCompat.getDrawable(App.getContext(), R.drawable.petrobras));
-        }else if(posto.equals("Shell")){
-            ivPosto.setImageDrawable(ContextCompat.getDrawable(App.getContext(), R.drawable.shell));
-        }else{
-            ivPosto.setImageDrawable(ContextCompat.getDrawable(App.getContext(), R.drawable.texaco));
-        }*/
+        if(this.objetoSendoExibido.getPosto().equals("Ipiranga")){
+            ivPosto.setImageResource(R.drawable.ipiranga);
+        }else if(this.objetoSendoExibido.getPosto().equals("Petrobras")){
+            ivPosto.setImageResource(R.drawable.petrobras);
+        }else if(this.objetoSendoExibido.getPosto().equals("Shell")){
+            ivPosto.setImageResource(R.drawable.shell);
+        }else if(this.objetoSendoExibido.getPosto().equals("Texaco")){
+            ivPosto.setImageResource(R.drawable.texaco);
+        }
 
     }
 }

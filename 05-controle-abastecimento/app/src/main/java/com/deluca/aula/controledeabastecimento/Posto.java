@@ -1,7 +1,7 @@
 package com.deluca.aula.controledeabastecimento;
 
 class Posto {
-    private int id =-1;
+    private int id=-1;
     private double  kilometros;
     private double  litros;
     private String data;

@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,9 +35,12 @@ public class MainActivity extends AppCompatActivity {
                 litros += abastecimento.get(i).getLitros();
             }
 
+            NumberFormat nf = DecimalFormat.getInstance();
+            nf.setMaximumFractionDigits(2);
+
             autonomia = kmPercorridos/litros;
             TextView tvResult = findViewById(R.id.tvAutonomia);
-            tvResult.setText(String.valueOf(autonomia));
+            tvResult.setText(String.valueOf(nf.format(autonomia)));
 
         }
     }
@@ -43,5 +48,37 @@ public class MainActivity extends AppCompatActivity {
     public void Historico(View view){
         Intent intent = new Intent(this.getApplicationContext(), HistoricoActivity.class);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+
+        ArrayList<Posto> abastecimento = new ArrayList<Posto>();
+
+        abastecimento = PostoDAO.getLista(this.getApplicationContext());
+        if ( abastecimento.size()>1){
+            double autonomia;
+            double kmPercorridos;
+            double litros=0;
+
+            kmPercorridos = abastecimento.get(abastecimento.size()-1).getKilometros() - abastecimento.get(0).getKilometros();
+            for(int i=0; i<abastecimento.size()-1; ++i){
+                litros += abastecimento.get(i).getLitros();
+            }
+
+            NumberFormat nf = DecimalFormat.getInstance();
+            nf.setMaximumFractionDigits(2);
+
+            autonomia = kmPercorridos/litros;
+            TextView tvResult = findViewById(R.id.tvAutonomia);
+            tvResult.setText(String.valueOf(nf.format(autonomia)));
+
+        }else {
+            TextView tvResult = findViewById(R.id.tvAutonomia);
+            tvResult.setText("--");
+        }
+        
     }
 }
