@@ -16,8 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HistoricoActivity" />
-        <activity android:name=".NovoCadastroActivity"></activity>
+        <activity android:name=".NovoAbastecimentoActivity" />
+        <activity android:name=".HistoricoActivity"></activity>
     </application>
 
 </manifest>

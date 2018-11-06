@@ -1,39 +1,25 @@
 package com.deluca.aula.controledeabastecimento;
 
-import java.io.Serializable;
-
-public class Posto implements Serializable {
+class Posto {
     private int id;
-    private Double km;
-    private Double litros;
+    private double  kilometros;
+    private double  litros;
     private String data;
     private String posto;
 
-    public Posto(){
-        this.setId(-1);
+    public double  getKilometros() {
+        return kilometros;
     }
 
-    public int getId() {
-        return id;
+    public void setKilometros(double kilometros) {
+        this.kilometros = kilometros;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Double getKm() {
-        return km;
-    }
-
-    public void setKm(double km) {
-        this.km = km;
-    }
-
-    public Double getLitros() {
+    public double  getLitros() {
         return litros;
     }
 
-    public void setLitros(Double litros) {
+    public void setLitros(double  litros) {
         this.litros = litros;
     }
 
@@ -51,5 +37,13 @@ public class Posto implements Serializable {
 
     public void setPosto(String posto) {
         this.posto = posto;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

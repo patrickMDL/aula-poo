@@ -4,97 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NovoCadastroActivity">
+    tools:context=".AdicionarAbastecimentoActivity">
 
     <TextView
-        android:id="@+id/tvKMAtual"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="@string/km2"
-        app:layout_constraintBottom_toTopOf="@+id/etKMAtual"
-        app:layout_constraintStart_toStartOf="@+id/etKMAtual" />
+        android:text="@string/fmKM"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etKmAtual"
+        app:layout_constraintStart_toStartOf="@+id/etKmAtual" />
 
     <EditText
-        android:id="@+id/etKMAtual"
+        android:id="@+id/etKmAtual"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
-
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etLitrosAbastecidos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etKmAtual" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/fmLitros"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/etLitrosAbastecidos"
+        app:layout_constraintStart_toStartOf="@+id/etLitrosAbastecidos" />
+
+    <EditText
+        android:id="@+id/etDataAtual"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/modeloData"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLitrosAbastecidos" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/fmData"
+        app:layout_constraintBottom_toTopOf="@+id/etDataAtual"
+        app:layout_constraintStart_toStartOf="@+id/etDataAtual" />
+
+    <Spinner
+        android:id="@+id/spPostos"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDataAtual" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:text="@string/L"
-        app:layout_constraintBottom_toTopOf="@+id/etLitros"
-        app:layout_constraintStart_toStartOf="@+id/etLitros" />
-
-    <EditText
-        android:id="@+id/etLitros"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etKMAtual" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/day"
-        app:layout_constraintBottom_toTopOf="@+id/etDay"
-        app:layout_constraintStart_toStartOf="@+id/etDay" />
-
-    <EditText
-        android:id="@+id/etDay"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etLitros" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/gasStation"
-        app:layout_constraintBottom_toTopOf="@+id/spGasStation"
-        app:layout_constraintStart_toStartOf="@+id/spGasStation" />
-
-    <Spinner
-        android:id="@+id/spGasStation"
-        android:layout_width="0dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:dropDownWidth="match_parent"
-        android:entries="@array/gasStationsOptions"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDay" />
+        android:text="@string/fmPostos"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spPostos"
+        app:layout_constraintStart_toStartOf="@+id/spPostos" />
 
     <Button
         android:id="@+id/button"
@@ -103,8 +107,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/next"
-        android:onClick="salvarPosto"
+        android:text="@string/fmSalvar"
+        android:onClick="salvar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

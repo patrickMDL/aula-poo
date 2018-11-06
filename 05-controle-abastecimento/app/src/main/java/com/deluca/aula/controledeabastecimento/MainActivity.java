@@ -15,34 +15,33 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FragmentManager fm = MainActivity.this.getSupportFragmentManager();
-        for(int i=0; i<fm.getBackStackEntryCount(); ++i){
+        for(int i = 0; i < fm.getBackStackEntryCount(); ++i) {
             fm.popBackStack();
         }
         setContentView(R.layout.activity_main);
 
-        ArrayList<Posto> abastecimentos = new ArrayList<Posto>();
+        ArrayList<Posto> abastecimento = new ArrayList<Posto>();
 
-        abastecimentos = PostoDao.getLista(this.getApplicationContext());
-        if (abastecimentos.size()>1){
+        abastecimento = PostoDAO.getLista(this.getApplicationContext());
+        if ( abastecimento.size()>1){
             double autonomia;
             double kmPercorridos;
-            double litros =0;
+            double litros=0;
 
-            kmPercorridos = abastecimentos.get(abastecimentos.size()-1).getKm() - abastecimentos.get(0).getKm();
-            for (int i=0; i< abastecimentos.size()-1; i++)
-                litros += abastecimentos.get(i).getLitros();
+            kmPercorridos = abastecimento.get(abastecimento.size()-1).getKilometros() - abastecimento.get(0).getKilometros();
+            for(int i=0; i<abastecimento.size()-1; ++i){
+                litros += abastecimento.get(i).getLitros();
+            }
 
             autonomia = kmPercorridos/litros;
-            TextView tvResult = findViewById(R.id.tvAutonomiaAtual);
+            TextView tvResult = findViewById(R.id.tvAutonomia);
             tvResult.setText(String.valueOf(autonomia));
+
         }
-
-
     }
 
-    public void onClickHistorico(View button){
-        Intent abrirNovoCadastro = new Intent( getApplicationContext(),  HistoricoActivity.class);
-        this.startActivity(abrirNovoCadastro);
-
+    public void Historico(View view){
+        Intent intent = new Intent(this.getApplicationContext(), HistoricoActivity.class);
+        startActivity(intent);
     }
 }

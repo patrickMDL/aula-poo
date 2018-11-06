@@ -7,35 +7,40 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tvAutonomiaAtual"
+        android:id="@+id/tvAutonomia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="10"
-        android:textSize="60sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="--"
+        android:textSize="50sp"
         android:textStyle="bold"
-        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvKmLMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="@string/sentence1"
-        app:layout_constraintBottom_toTopOf="@+id/tvAutonomiaAtual"
-        app:layout_constraintEnd_toEndOf="@+id/tvAutonomiaAtual" />
+        android:text="@string/KM_L"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAutonomia"
+        app:layout_constraintStart_toEndOf="@+id/tvAutonomia" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:text="@string/km1"
-        app:layout_constraintStart_toStartOf="@+id/tvAutonomiaAtual"
-        app:layout_constraintTop_toBottomOf="@+id/tvAutonomiaAtual" />
+        android:text="@string/autonomia"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvAutonomia"
+        app:layout_constraintEnd_toEndOf="@+id/tvAutonomia" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -44,10 +49,8 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:clickable="true"
-        android:onClick="onClickHistorico"
-        app:backgroundTint="@color/colorPrimary"
+        android:onClick="Historico"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_recent_history" />
-
 </android.support.constraint.ConstraintLayout>

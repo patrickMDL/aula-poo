@@ -1,29 +1,21 @@
 <resources>
     <string name="app_name">Controle de Abastecimento</string>
-    <string name="sentence1">Autonomia Atual</string>
-    <string name="km1">KM/L</string>
-    <string-array name="gasStationsOptions">
-        <item>Outros</item>
-        <item>Texaco</item>
-        <item>Shell</item>
-        <item>Petrobras</item>
-        <item>Ipiranga</item>
+    <string name="modeloData">DD/MM/AAAA</string>
+    <string name="modeloKilometro">KM:----</string>
+    <string name="modeloLitro">--L</string>
 
-    </string-array>
-    <string name="next">Avançar</string>
-    <string name="km2">Quilometragem atual</string>
-    <string name="L">Litros Abastecidos</string>
-    <string name="day">Data</string>
-    <string name="gasStation">Postos</string>
+    <!-- Perguntas pro formulario  -->
+    <string name="fmKM">KM Atual:</string>
+    <string name="fmLitros">Litros: Abastecidos</string>
+    <string name="fmData">Data: </string>
+    <string name="fmPostos">Selecione o posto:</string>
+    <string name="fmSalvar">Salvar</string>
 
-    <string name="km_maior">KM deve ser maior que o anterior</string>
-    <string name="campo_preenchido">Campo deve ser preenchido</string>
-    <string name="km_atual">Km atual</string>
+    <!-- Para erros -->
+    <string name="campo_vazio">Preencha este campo.</string>
+    <string name="km_menor">KM atual deve ser maior que a anterior.</string>
 
-    <!-- Para a "capa" que insere na lista -->
-    <string name="km">KM: </string>
-    <string name="kmLista">000000</string>
-    <string name="dataLista">__/__/__</string>
-    <string name="Listros"> --L</string>
-    <string name="imageDescription">Imagem padrao para ser trocada pelo posto selecionado</string>
+    <!-- Para o main -->
+    <string name="KM_L">KM/L</string>
+    <string name="autonomia">Autonomia atual</string>
 </resources>

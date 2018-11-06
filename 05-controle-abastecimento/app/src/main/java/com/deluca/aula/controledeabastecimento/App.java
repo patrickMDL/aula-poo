@@ -6,7 +6,7 @@ import android.content.Context;
 public class App extends Application {
     private static Application sApplication;
 
-    public static Application getApplication(){
+    public static Application getApplication() {
         return sApplication;
     }
 
@@ -19,5 +19,4 @@ public class App extends Application {
         super.onCreate();
         sApplication = this;
     }
-
 }
