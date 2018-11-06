@@ -28,7 +28,7 @@ public class PostoViewHolder extends RecyclerView.ViewHolder{
             public void onClick(View view) {
                 Intent abrirAtividade = new Intent( view.getContext(), NovoAbastecimentoActivity.class );
                 abrirAtividade.putExtra("posto", (Serializable) PostoViewHolder.this.objetoSendoExibido);
-                ((MainActivity) view.getContext()).startActivityForResult(abrirAtividade, HistoricoActivity.RC_ADICIONAR_ABASTECIMENTO);
+                ((HistoricoActivity) view.getContext()).startActivityForResult(abrirAtividade, HistoricoActivity.RC_ADICIONAR_ABASTECIMENTO);
             }
         });
 
@@ -76,7 +76,7 @@ public class PostoViewHolder extends RecyclerView.ViewHolder{
         this.tvLitros.setText(Litros);
         this.tvKilometros.setText(Kilmetros);
 
-        if(posto.equals("Ipiranga")){
+       /* if(posto.equals("Ipiranga")){
             ivPosto.setImageDrawable(ContextCompat.getDrawable(App.getContext(), R.drawable.ipiranga));
         }else if(posto.equals("Petrobras")){
             ivPosto.setImageDrawable(ContextCompat.getDrawable(App.getContext(), R.drawable.petrobras));
@@ -84,7 +84,7 @@ public class PostoViewHolder extends RecyclerView.ViewHolder{
             ivPosto.setImageDrawable(ContextCompat.getDrawable(App.getContext(), R.drawable.shell));
         }else{
             ivPosto.setImageDrawable(ContextCompat.getDrawable(App.getContext(), R.drawable.texaco));
-        }
+        }*/
 
     }
 }

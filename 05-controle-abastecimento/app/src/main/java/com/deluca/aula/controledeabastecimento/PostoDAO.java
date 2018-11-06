@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class PostoDAO {
     private static ArrayList<Posto> AL_CACHE = new ArrayList<>();
 
-    private static final String NOME_ARQUIVO = "posto1.txt";
+    private static final String NOME_ARQUIVO = "posto3.txt";
 
     private static boolean salvarNovo(Context c, Posto aSerSalvo){
         aSerSalvo.setId(AL_CACHE.size());

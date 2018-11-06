@@ -18,6 +18,7 @@ public class HistoricoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_historico);
 
         RecyclerView rvListaPosto = findViewById(R.id.rvLista);
+
         this.adaptador = new PostoAdapter();
         this.adaptador.listaPostos = PostoDAO.getLista(this.getApplicationContext());
 
@@ -27,8 +28,6 @@ public class HistoricoActivity extends AppCompatActivity {
 
     public void onClickFAB(View v){
         Intent intencao = new Intent(this.getApplicationContext(), NovoAbastecimentoActivity.class);
-
-
         startActivityForResult(intencao, RC_ADICIONAR_ABASTECIMENTO);
 
     }
