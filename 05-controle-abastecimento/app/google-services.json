@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "610852555888",
+    "firebase_url": "https://controle-abastecimento.firebaseio.com",
+    "project_id": "controle-abastecimento",
+    "storage_bucket": "controle-abastecimento.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610852555888:android:37a70686f2b5845b",
+        "android_client_info": {
+          "package_name": "com.deluca.aula.controledeabastecimento"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "610852555888-r43s8k45s1md6imbhlc22fn8v1t2g8m2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDy-2hwQqFtz8tHkiiAf3PVSB_tdXjlHos"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
